@@ -46,7 +46,7 @@ ul,ol,.city
     display: flex ;
     flex-direction: row;
     gap: 7px;
-    justify-content: space-evenly
+    justify-content: space-around
 }    
 dfn,h4
 {
