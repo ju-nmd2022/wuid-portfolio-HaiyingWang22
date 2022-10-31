@@ -1,0 +1,58 @@
+body
+{
+    outline-color: black;outline-style: solid;
+}
+header
+{
+    font-family:"Arial", sans-serif;
+    background-color: #648dcc;
+    text-indent: 1em;
+}
+h3,h4
+{
+    font-family:"Arial", sans-serif;
+    text-indent: 1em;
+    
+}
+.first
+{
+    display: flex ;
+    flex-direction: row;
+    gap: 150px;
+    flex-wrap:wrap;
+    flex-basis: 720px;
+}
+.myphoto
+{
+    width: 100px;
+    transform: translate(0px,-15px); 
+    flex-shrink:0 
+}
+ul,ol,.city
+{
+    font-family:"Georgia", serif;
+}
+.city
+{
+    transform: translate(20px,0px)
+}
+.photo123
+{
+    width: 195px;
+}
+.city-photo
+{
+    display: flex ;
+    flex-direction: row;
+    gap: 7px;
+    justify-content: space-evenly
+}    
+dfn,h4
+{
+    color: rgb(126, 126, 126);
+}
+footer
+{
+    float: right;
+}
+
