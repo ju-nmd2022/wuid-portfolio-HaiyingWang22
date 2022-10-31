@@ -1,5 +1,6 @@
 body
 {
+    width: 720px;
     outline-color: black;outline-style: solid;
 }
 header
