@@ -19,7 +19,7 @@ h3,h4
 {
     display: flex ;
     flex-direction: row;
-    gap: 150px;
+    gap: 200px;
     flex-wrap:wrap;
     flex-basis: 720px;
 }
@@ -45,7 +45,6 @@ ul,ol,.city
 {
     display: flex ;
     flex-direction: row;
-    gap: 7px;
     justify-content: space-around
 }    
 dfn,h4
