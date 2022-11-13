@@ -1,0 +1,133 @@
+body
+{
+    margin: auto;
+    outline-color: black;outline-style: solid;
+}
+@media screen and (min-width: 1080px) 
+{
+    body
+    {
+        width:1080px;
+    }
+    .photo5,.photo4,.photo3
+    {
+        max-width: 300px;
+        
+    }
+    .photo2,.photo1
+    {
+        max-height: 200px;
+    }
+}
+@media screen and (min-width: 720px) and (max-width:1080px)
+{
+    body
+    {
+        width: 720px;
+    }
+        .photo5,.photo4,.photo3
+    {
+        max-width: 200px;
+        
+    }
+    .photo2,.photo1
+    {
+        max-height: 150px;
+    }
+}
+@media screen  and (max-width:720px)
+{
+    body
+    {
+        width: 600px;
+    }
+    .photo5,.photo4,.photo3
+    {
+        max-width: 100px;
+        
+    }
+    .photo2,.photo1
+    {
+        max-height: 100px;
+    }
+}
+
+
+
+.container 
+{  
+    display: grid;
+    grid-template-columns:4% 30% 30% 30% 4%;
+    grid-template-rows: 10% 5% 30% 5% 30% 10%;
+    gap: 0.5em 0.5em;
+    grid-auto-flow: row;
+    grid-template-areas:
+      ". header header header ."
+      ". Photography . . ."
+      ". photolink photo4 photo3 ."
+      ". designs . . ."
+      ". layout1 . layout2 ."
+      ". link . . .";
+}
+.contant 
+{
+    display: grid; 
+    grid-template-columns: 0.5fr 2fr 1fr 0.5fr; 
+    grid-template-rows: 0.1fr 1fr 0.4fr; 
+    gap: 10px 10px; 
+    grid-template-areas: 
+      ". . . ."
+      ". photoG p ."
+      ". link . ."; 
+    
+}
+
+.photoG 
+{ 
+    grid-area: photoG;
+    max-width: 400px; 
+}
+p 
+{ 
+    grid-area: p; 
+    font: size 1em;
+    justify-items: end; 
+}
+.Photography { grid-area: Photography; }
+.photolink { grid-area: photolink; }
+.photo4 { grid-area: photo4; }
+.photo3 { grid-area: photo3; }
+.designs { grid-area: designs; }
+.layout1 { grid-area: layout1; }
+.layout2
+{ 
+    grid-area: layout2; 
+    transform: translate(-60px,0px); 
+}
+.link 
+{ 
+    transform: translate(0px,30px); 
+    grid-area: link; 
+}
+  
+header 
+{ 
+    grid-area: header;
+    font-family:"Arial", sans-serif;
+    background-color: #648dcc;
+    text-indent: 1em; 
+    grid-area: 1 / 2 / 2 / 5;
+}
+h3,h4
+{
+    font-family:"Arial", sans-serif;
+    text-indent: 1em;  
+}
+dfn,h4
+{
+    color: rgb(126, 126, 126);
+}
+footer
+{
+    float: right;
+}

@@ -1,5 +1,6 @@
 body
 {
+    margin: auto;
     width: 1080px;
     outline-color: black;outline-style: solid;
 }
@@ -13,7 +14,10 @@ body
     ". contant ."
     ". link .";
 }
-.contant { grid-area: contant; }
+.contant 
+{ 
+    grid-area: contant; 
+}
 header
 {
     font-family:"Arial", sans-serif;
