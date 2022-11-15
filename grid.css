@@ -3,12 +3,16 @@ body
     margin: auto;
     outline-color: black;outline-style: solid;
 }
-@media screen and (min-width: 1080px) 
+@media screen and (min-width: 1200px) 
 {
     body
     {
         width:1080px;
         font-size: 20px;
+    }
+    h4
+    {
+        text-indent: 1em; 
     }
     .photo5,.photo4,.photo3
     {
@@ -19,45 +23,12 @@ body
     {
         height: 250px;
     }
-}
-@media screen and (min-width: 720px) and (max-width:1080px)
-{
-    body
+    .layout2
     {
-        width: 720px;
+        transform: translate(-60px,0px); 
     }
-        .photo5,.photo4,.photo3
-    {
-        max-width: 200px;
-        
-    }
-    .photo2,.photo1
-    {
-        max-height: 170px;
-    }
-}
-@media screen  and (max-width:720px)
-{
-    body
-    {
-        width: 600px;
-        font-size: 10px;
-    }
-    .photo5,.photo4,.photo3
-    {
-        max-width: 150px;
-        
-    }
-    .photo2,.photo1
-    {
-        max-height: 130px;
-    }
-}
-
-
-
-.container 
-{  
+    .container 
+    {  
     display: grid;
     grid-template-columns:5% 27% 27% 27% 5%;
     grid-template-rows: 10% 5% 30% 5% 35% 5%;
@@ -70,7 +41,94 @@ body
       ". designs . . ."
       ". layout1 . layout2 ."
       ". link . . .";
+    }
 }
+@media screen and (min-width: 768px) and (max-width:1200px)
+{
+    body
+    {
+        width: 720px;
+        
+    }
+    .photo5,.photo4,.photo3,.layout1,.layout2
+    {
+        transform: translate(20px,0px);
+    }
+    .photo5,.photo4,.photo3
+    {
+        max-width: 270px;
+         
+    }
+    .photo2,.photo1
+    {
+        place-items: end;
+        max-height: 230px;
+    }
+    .container 
+    {  display: grid;
+        grid-template-columns:  50% 50% ;
+        grid-template-rows: 100px 50px 200px 200px 50px 300px 300px 20px; 
+        gap: 1em 0em;
+        grid-auto-flow: row;
+        justify-items: stretch;
+        grid-template-areas:
+        "header header "
+        "Photography . "
+        "photolink photo3 "
+        "photo4 . "
+        "designs . "
+        "layout1 . "
+        "layout2 . "
+        " link . ";
+    } 
+}
+@media screen  and (max-width:768px)
+{
+    body
+    {
+        width: auto;
+        font-size: 62.5%;
+    }
+    .photo5,.photo4,.photo3,.layout1,.layout2
+    {
+        transform: translate(20px,0px);
+    }
+    .photo5,.photo4,.photo3
+    {
+        width: 270px;
+        
+    }
+    .photo2
+    {
+        max-height: 230px;
+    }
+    .photo1
+    {
+        width: 350px;
+    }
+    .container 
+    {  display: grid;
+        grid-template-columns:  50% 50% ;
+        grid-template-rows: 50px 25px 200px 200px 200px 25px 300px 300px 20px; 
+        gap: 1em 0em;
+        grid-auto-flow: row;
+        justify-items: stretch;
+        grid-template-areas:
+        "header header "
+        "Photography . "
+        "photolink . "
+        "photo3 . "
+        "photo4 . "
+        "designs . "
+        "layout1 . "
+        "layout2 . "
+        "link . ";
+    }
+}
+
+
+
+
 .contant 
 {
     display: grid; 
@@ -104,23 +162,22 @@ p
 .layout2
 { 
     grid-area: layout2; 
-    transform: translate(-60px,0px); 
+    
 }
 .link 
 { 
     transform: translate(0px,-30px); 
     grid-area: link; 
 }
-  
 header 
 { 
     grid-area: header;
     font-family:"Arial", sans-serif;
     background-color: #648dcc;
     text-indent: 1em; 
-    grid-area: 1 / 2 / 2 / 5;
+    
 }
-h3,h4
+h2,h3
 {
     font-family:"Arial", sans-serif;
     text-indent: 1em;  
@@ -129,10 +186,7 @@ dfn,h4
 {
     color: rgb(126, 126, 126);
 }
-a
-{
-    text-decoration: none;    
-}
+
 footer
 {
     float: right;
