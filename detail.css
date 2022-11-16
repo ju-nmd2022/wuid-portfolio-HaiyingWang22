@@ -1,0 +1,88 @@
+.contant 
+{  
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    grid-template-rows: 100px 350px 100px;
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 1fr;
+    grid-auto-flow: row;
+    justify-items: stretch;
+    grid-template-areas:
+      ". . ."
+      ". fb ."
+      ". link .";
+}
+  
+.fb 
+{ 
+    grid-area: fb;
+    display: flex ;
+    flex-direction: row;
+    gap: 20px;
+    flex-wrap:onwrap;
+    align-content: flex-start;
+}
+  
+.link { grid-area: link; }
+  
+body
+{
+    margin: auto;
+    width:1080px;
+    outline-color: black;outline-style: solid;
+}
+.photo
+{
+    max-width:300px;
+    max-height: 185px;
+}
+.photoG 
+{ 
+    width:300px; 
+}
+
+p 
+{  
+    font: size 1em;
+    justify-items: end; 
+}
+.link 
+{ 
+     
+    grid-area: link; 
+}
+footer
+{
+    float: right;
+}
+@media screen and (min-width: 1200px) 
+{
+    body
+    {
+        width:1080px;
+        font-size: 20px;
+    }
+}
+@media screen and (min-width: 768px) and (max-width:1200px)
+{
+    body
+    {
+        width: 720px;
+        
+    }
+    .fb
+    {
+        flex-wrap:wrap;
+    }
+}
+@media screen  and (max-width:768px)
+{
+    body
+    {
+        width: 500px; 
+    }
+    .fb
+    {
+        flex-wrap:wrap;
+    }
+}
