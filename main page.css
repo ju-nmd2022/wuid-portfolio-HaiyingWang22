@@ -1,31 +1,52 @@
 .container {  display: grid;
-    grid-template-columns: 0.5fr 2fr .5fr;
-    grid-template-rows: 70px 600px 300px 100px; 
+    grid-template-columns: 0.5fr 2fr 0.5fr;
+    grid-template-rows: 600px 300px 100px; 
     grid-auto-columns: 1fr;
     grid-auto-flow: row;
     justify-items: stretch;
     grid-template-areas:
-      "header header header"
       "hero hero hero"
       ". contant ."
       ". link .";
   }
   
-.hero { grid-area: hero; }
-
+.hero 
+{ 
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 0.5fr;
+    grid-template-rows: 600px;
+    grid-template-areas:". hero-text .";
+    grid-area: hero;
+    background: url("interlaken.jpg") center 0 no-repeat;
+}
+.hero-text
+{
+    width: 300px;
+    grid-area: hero-text;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 100px;
+    text-align:center;
+}
 .city1
 {
     height: 600px;
 }
 
-.contant { grid-area: contant; }
+.contant 
+{ 
+    grid-area: contant; 
+    max-width: 680px;
+    margin: auto;
+}
   
 .link { grid-area: link; }
   
 header 
 {  
     display: grid;
-    grid-template-columns: 0.5fr 2fr .5fr;
+    grid-template-columns: 0.5fr 2fr 0.5fr;
     grid-template-rows: 1fr;
     gap: 0px 0px;
     grid-auto-flow: row;
