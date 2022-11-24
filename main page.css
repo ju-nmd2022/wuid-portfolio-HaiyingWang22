@@ -12,15 +12,32 @@
   
 .hero 
 { 
+    display: none;
     display: grid;
     grid-template-columns: 0.5fr 2fr 0.5fr;
     grid-template-rows: 600px;
     grid-template-areas:". hero-text .";
     grid-area: hero;
     background: url("interlaken.jpg") center 0 no-repeat;
+    animation-name: secondkey;
+    animation-duration: 3000ms;
+    opacity: 0.5;
+    animation-fill-mode: forwards;
+}
+@keyframes secondkey
+{
+    50%
+    {
+        opacity: 0.75;
+    }
+    100%
+    {
+        opacity: 1;
+    }
 }
 .hero-text
 {
+    
     width: 300px;
     grid-area: hero-text;
     font-family: 'Inter';
@@ -28,6 +45,34 @@
     font-weight: 700;
     font-size: 100px;
     text-align:center;
+    animation-name: firstkey;
+    animation-duration: 3000ms;
+    color: 	#0e0e24;
+}
+.hero-text::before
+{
+    animation-play-state:paused;
+}
+.hero-text:hover
+{
+    animation-play-state:running;
+}
+@keyframes firstkey
+{
+    
+    25%
+    {
+        transform: translateX(100px);
+    }
+    50%
+    {
+        color: 	#c7a338;
+    }
+    25%,75%
+    {
+        color: 	#b94e27;
+    }
+
 }
 .city1
 {
